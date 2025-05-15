@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bestellfix-api",
+  "private_key_id": "b0a7710a414916f13adbbc399ae8d6a338633cd6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDExKXLKqe1ibxd\nL3eFPrHiQI3wNOPwh9cWly3fGXrR3t1mRSE/Sy/ir2HC7pERsrVHSZloiXNPOHxx\nLES2x5WUsQbV6k9yMb2lIPvHcW6PqN1nERRbul2ljYehJ0lgWrOqG6FOHgHcwm3S\nGWUZyNdZbP2O7Rser18gYHb4di3alJDI6TwVTHsHhMsp0hzxixVXRA+fAREyZt1f\nnJtyYiOKe47lz9b/kEODjUUTOjVhNP7OO530NkoShtDqvo3DrPf1VW/m/+38lo0E\nDBvzPD7eoFYbdrKxxX7kwtCJScVzAnhrFbV3GXhM7exeAQpixqvs1A9ItbtD5O+8\nhOpeBj8rAgMBAAECggEABm/Uz2zuS14dnajGjqlqruP9hxZophiZ6ZQssBTImhWV\nBY1ZlWH5+r7raLHFAiC0yG4fPBzrx9nC5f4Uo19FEYLdaxSjehdbEYwe+gfIBGzg\nQHv92Znvo7fmo3F1d4oppw6iiLuRKqEbozKPrNFcP7TBvxhN+YOAJ6V9AgspQqWB\n2DONIftsqiGAzewUVN+CCr2XX0NlnG49oTSVRIED5n+yhPaGGKacCoQ24z+1UAbR\n0S1V/6Xt9tIfGgtGXO8UvXaTYkNhfXoMRfznwppN7uZ0pKgN6Effk833AZEuosOA\nYG7ogPUgG5dPadoK4csAifDJgFB7vu3lfLa3co8BnQKBgQDlOjOtVKXQW7OUGSQu\n++aHeJHC9i4YLmyVBbOFbx9wSMgL/iWlAMl+tWU9o4sHQHesVx6P1C4mHH1vtJdC\nhQwfQlYt+oA978b19sGdSHPmQ9ebbA591ebnjHqbeDn6bEu1xxZU4jVGR+PTJMOy\n4KAMBMsjvQFeSEUYrznBjGnZxwKBgQDbv+4OxDbrKDiPGiBmbLA7BLlg/PypS4uD\nFTB4vcRORWpDk0wqebsRVMVce8HJ5GYHfTJupRv5BxcDdMAQe46m10J0fRtUk4La\nJK+IVpeEAlMYPYcEqVBwuATP1AiLbHs69uecTUpgn3TZZ33m6fFULCFk1CzpMOAj\nvCGS9snPfQKBgCcyz7l5Oy2pMMlHj1d1fhN2e76SKIm8DpdhNTTBLugdmg/q8vcH\nbm17iYeD2vdvf8d50mEYEJg10QF0KVWXuN3zkxcjuiBdS3GuM6e4xxD+UvViAgxk\nsqqv7Bt/8LIxKLU6CUiUsjWFf6EQrWJ+ZQAJJc/Dt2MvCpnRBRhi8YrrAoGAVr2K\n7V88QlSNBseMVIHAintR5VvXK8g7GJHroS1e6Hpz+JqS7Q1B7xRkFx5unw+9ymT7\n3DrmMMVAq0eRbLAo3eiIPc0IVbkoZI0okIuFoUD9pcrbmdZvfx7UH2kVulsmxV6i\ni8riegNXL12vj892SABnahJqa920C8b+BbHOdU0CgYEA31LpKGvaMPjR6N2JK3Df\nZIoqKM/mR43eu/GoR2P0TQxYHgNEPL93ZnLP+H6aLRRJXfPx8OEZGgnayZvLBujr\negNq3b/iEX9uCwNnHeUfkYlG8hKPR/ZdbnX0gCcZVqPEqpfOV+Uo6dgYtg1ZevnH\nqD+1qJyRXMufNvP/7EIFk1E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "milandinbestellfix@bestellfix-api.iam.gserviceaccount.com",
+  "client_id": "100986882174090384099",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/milandinbestellfix%40bestellfix-api.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
