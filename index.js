@@ -1,52 +1,40 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const { google } = require('googleapis');
-const cors = require('cors');
+const keys = require('./bestellfix-api-b0a770b84193.json');
 
-const app = express();
-app.use(cors());
-app.use(bodyParser.json());
-
-const PORT = process.env.PORT || 3000;
-
-// Replace with your Google Service Account credentials
-const serviceAccount = require('./service-account.json');
-
-// Your Google Sheet ID
 const SPREADSHEET_ID = '162gFgJfxelvbioof_kTRer5_5LPZJnmfDTdt9WW2JBw';
 
-const auth = new google.auth.GoogleAuth({
-  credentials: serviceAccount,
-  scopes: ['https://www.googleapis.com/auth/spreadsheets']
-});
+const app = express();
+app.use(express.json());
 
-app.post('/add-item', async (req, res) => {
-  const { articleNumber, note } = req.body;
+async function getAuthSheets() {
+  const auth = new google.auth.GoogleAuth({
+    credentials: keys,
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+  const client = await auth.getClient();
+  return google.sheets({ version: 'v4', auth: client });
+}
 
-  if (!articleNumber) {
-    return res.status(400).json({ error: 'articleNumber is required' });
-  }
+app.post('/add', async (req, res) => {
+  const { artikelnummer, notizen } = req.body;
 
   try {
-    const client = await auth.getClient();
-    const sheets = google.sheets({ version: 'v4', auth: client });
-
-    const response = await sheets.spreadsheets.values.append({
+    const sheets = await getAuthSheets();
+    await sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'Tabelle1!A:B',
-      valueInputOption: 'USER_ENTERED',
+      range: 'A:B',
+      valueInputOption: 'RAW',
       requestBody: {
-        values: [[articleNumber, note || 'bitte bestellen']]
-      }
+        values: [[artikelnummer, notizen || '']],
+      },
     });
-
-    res.status(200).json({ success: true, result: response.data });
-  } catch (error) {
-    console.error('Error appending to sheet:', error);
-    res.status(500).json({ error: 'Failed to append data to Google Sheet' });
+    res.status(200).send('Erfolgreich hinzugefügt!');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Fehler beim Hinzufügen.');
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server läuft auf Port ${PORT}`));
