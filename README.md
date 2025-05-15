@@ -1,3 +1,3 @@
-# Milandin BestellFix Backend
+# Milandin BestellFix Backend (src-Version)
 
-Dieses Backend empfängt Artikelnummern via POST und trägt sie ins Google Sheet ein.
+Backend für Artikelnummern → Google Sheet. Leg deine JSON-Datei hier rein.
